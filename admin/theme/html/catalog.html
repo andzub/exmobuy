@@ -1,0 +1,62 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<h1>Каталог</h1>
+<div class="catalogAdd__box">
+    <a href="/admin/product/">Добавить товар</a>
+    <a href="/admin/categories/">Добавить категорию</a>
+</div>
+<div class="category-wrap">
+    <div class="left-sidebar"><!--left sidebar-->
+        <h2>Категории</h2>
+        <div class="panel-group category-products" id="accordian"><!--category-products-->
+            {% for product_cat in product_categories %}
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordian" href="">
+                            <!-- <span class="badge pull-right"><i class="fa fa-plus"></i></span> -->
+                        </a>
+                        <form action="/admin/edit-categories/" method="post">
+                            <input type="hidden" name="id" value="{{ product_cat.category_id }}">
+                            <input type="submit" name="edit" value="{{ product_cat.name }}">
+                        </form>
+                    </h4>
+                </div>
+                <!-- <div id="sportswear" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <ul>
+                            <li><a href="#">Nike </a></li>
+                        </ul>
+                    </div>
+                </div> -->
+            </div>
+            {% endfor %}
+        </div><!--/category-products-->
+    </div><!--/left sidebar-->
+    <div class="preview-wrap">
+        {% for product in products %}
+            <ul class="preview-box">
+                <li><img src="/files/uploads/{{ product.image }}" alt=""></li>
+                <li>{{ product.name }}</li>
+                <li>{{ product.description }}</li>   
+                <li>{{ product.price }} грн.</li>
+                <li> 
+                    <form action="" method="POST">
+                        <input type="hidden" name="product_id" value="{{ product.product_id }}">
+                        <div class="delete-update-btn">
+                            <input type="submit" name="delete" value="Удалить">
+                        </div>
+                    </form>
+                    <form action="/admin/edit-product/" method="POST">
+                        <input type="hidden" name="product_id" value="{{ product.product_id }}">
+                        <div class="delete-update-btn">
+                            <input type="submit" name="edit" value="Редактировать">
+                        </div>
+                    </form>
+                </li>
+            </ul>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

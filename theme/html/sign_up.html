@@ -1,0 +1,19 @@
+{% extends 'index.html' %}
+{% block pagetitle %} EX | Регистрация {% endblock %}
+
+{% block content %}
+    <h1 class="page-title">Регистрация</h1>
+    <form id="login-form" action="login/run" method="post">
+        <label>Имя</label>
+        <input type="text" name="first_name">
+        <label>Фамилия</label>
+        <input type="text" name="last_name">
+        <label>Телефон</label>
+        <input type="tel" name="phone">
+        <label>Пароль</label>
+        <input type="pass" name="password1">
+        <label>Введите пароль повтороно</label>
+        <input type="pass" name="password2">
+        <input type="submit">
+    </form>
+{% endblock %}

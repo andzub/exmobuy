@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<h1>{{ name }}</h1>
+<div class="productForm__box">
+    <form class="producForm" action="" method="post">
+        <div class="form-group">
+            <label for="name">Название категории</label>
+            <input class="form-control" type="text" name="name" value="{{ product_category.name }}">
+            <label for="url">URL</label>
+            <input class="form-control" type="text" name="url" value="{{ product_category.url }}">
+        </div>
+        <input type="submit" name="save" value="Сохранить">
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block pagetitle %}{% endblock %}</title>
+    {% include 'include/head.html' %}
+</head>
+<body>
+
+    <header id="header">
+      {% include 'include/header.html' %}
+    </header>
+
+    {% block baner %}{% endblock %}
+
+    <div id="contentWrapper">
+        {% block sidebar %}{% endblock %}
+        <main id="content">
+                {% block content %}{% endblock %}
+        </main>
+    </div>
+
+    <footer id="footer">
+        {% include 'include/footer.html' %}
+    </footer>
+
+    {% include 'include/script.html' %}
+</body>
+
+</html>

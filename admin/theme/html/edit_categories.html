@@ -1,0 +1,13 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<h1>Редактирование категории</h1>
+    <form class="form-edit-cat" action="" method="post">
+        <input type="hidden" name="category_id" value="{{ category.category_id }}">
+        <input type="text" name="name" value="{{ category.name }}">
+        <div class="form-edit-btn">
+            <input type="submit" name="change" value="Изменить">
+            <input type="submit" name="delete" value="Удалить">
+        </div>
+    </form>
+{% endblock %}

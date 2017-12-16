@@ -1,0 +1,137 @@
+html,
+body {
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+#header {
+    background: #3a3a3a;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+.headerMenu ul {
+    display: flex;
+    align-items: center;
+}
+
+.headerMenu ul li a {
+    color: #fff;
+    margin-right: 20px;
+}
+/* content */
+#content {
+    width: 1200px;
+    margin: 0 auto;
+}
+/* product page */
+.form-control {
+    width: 100%;
+    padding: 6px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #999;
+}
+.file {
+    border: 0;
+}
+.product-btn {
+    border: 0;
+    background: #3a3a3a;
+    color: #fff;
+    margin: 10px 0;
+    padding: 5px;
+}
+.preview-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.preview-box {
+    width: 200px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 10px;
+}
+.preview-box li img {
+    height: 150px;
+}
+.catalogAdd__box a {
+    color: #fff;
+    margin: 10px;
+    padding: 10px 20px;
+    background: #3a3a3a;
+}
+.delete-update-btn {
+    width: 100%;
+    display: flex;
+    margin: 10px 0;
+}
+.delete-update-btn input[name="delete"] {
+    background: red;
+    border: 0;
+    color: #fff;
+    margin: 0 5px;
+    cursor: pointer; 
+}
+.delete-update-btn input[name="edit"] {
+    background: green;
+    border: 0;
+    color: #fff;
+    margin: 0 5px; 
+    cursor: pointer;
+}
+.category-wrap {
+    display: flex;
+    margin-top: 20px;
+}
+.left-sidebar {
+    width: 250px;
+}
+.panel-title {
+    margin: 5px;
+}
+.panel-title a {
+    color: #999;
+}
+.panel-title form input[type=submit] {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+.form-edit-cat {
+    margin-top: 20px;
+}
+.form-edit-cat input[type=text]{
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: solid 1px #999;
+}
+.form-edit-cat input[type=submit]{
+    cursor: pointer;
+    border: 0;
+    color: #fff;
+    padding: 3px 8px;;
+    margin-top: 10px;
+}
+.form-edit-cat input[name=change]{
+    background: green;
+}
+.form-edit-cat input[name=delete]{
+    background: red;
+}
+#select-category {
+    margin: 10px 0 20px;
+}
